@@ -84,16 +84,16 @@ pipeline {
       }
     }
 
-    stage("⏸ Pause for Screenshots & Verification") {
+    stage("⏸ Pause for Screenshots & Manual Verification") {
       steps {
         input message: '''
-Pipeline completed successfully ✅
+Pipeline SUCCESS ✅
 
-👉 Take screenshots now:
-- Jenkins Pipeline (Stage View)
-- EC2 Instance (Running)
+📸 Take screenshots now:
+- Jenkins Stage View
+- Terraform Apply Output
+- EC2 Running
 - SSM Managed Instance (Online)
-- Dynamic Inventory Output
 - Ansible Ping Success
 
 Click CONTINUE to destroy infrastructure.
@@ -104,8 +104,8 @@ Click CONTINUE to destroy infrastructure.
 
   post {
 
-    always {
-      echo "🧨 Destroying infrastructure..."
+    success {
+      echo "✅ Pipeline successful — destroying infra after approval"
       withCredentials([
         [$class: 'AmazonWebServicesCredentialsBinding', credentialsId: 'aws-creds']
       ]) {
@@ -113,12 +113,22 @@ Click CONTINUE to destroy infrastructure.
           sh 'terraform destroy -auto-approve'
         }
       }
-      echo "🧹 Cleaning workspace"
-      cleanWs()
     }
 
     failure {
-      echo "❌ Pipeline failed — infra cleanup executed"
+      echo "❌ Pipeline failed — destroying infra immediately"
+      withCredentials([
+        [$class: 'AmazonWebServicesCredentialsBinding', credentialsId: 'aws-creds']
+      ]) {
+        dir('Terraform/envs/dev') {
+          sh 'terraform destroy -auto-approve'
+        }
+      }
+    }
+
+    always {
+      echo "🧹 Cleaning Jenkins workspace"
+      cleanWs()
     }
   }
 }
