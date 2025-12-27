@@ -26,8 +26,7 @@ pipeline {
           echo "🔍 Verifying Jenkins Agent Environment"
           terraform -version
           ansible --version
-          aws sts get-caller-identity
-          session-manager-plugin --version
+          
         '''
       }
     }
