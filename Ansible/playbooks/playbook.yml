@@ -1,0 +1,9 @@
+- name: Bootstrap & Configure EC2 servers
+  hosts: app
+  become: yes
+  gather_facts: no   # 🔴 IMPORTANT
+  roles:
+    - common
+    - docker
+    - nginx
+    - app

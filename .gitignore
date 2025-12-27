@@ -1,0 +1,19 @@
+# Terraform
+**/.terraform/*
+*.tfstate
+*.tfstate.*
+*.tfvars
+*.lock.hcl
+*.plan
+
+# Ansible
+*.retry
+
+# Jenkins
+workspace/
+
+# Logs
+*.log
+
+# OS
+.DS_Store
