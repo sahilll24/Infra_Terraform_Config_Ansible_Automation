@@ -1,4 +1,4 @@
-# 🚀 Fully Automated Infrastructure & Configuration Deployment  
+# 🚀 Fully Automated Infrastructure & Configuration Deployment ( Zero Human Intervention ) 
 ### Terraform Modules + Ansible Roles + Jenkins + AWS SSM
 
 Production-grade **Infrastructure as Code (IaC)** and **Configuration Management** project demonstrating **secure, SSH-less automation** using **AWS Systems Manager (SSM)**, **Terraform modules**, **Ansible roles**, and **Jenkins pipelines**.
