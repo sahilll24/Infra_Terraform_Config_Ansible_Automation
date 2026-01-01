@@ -1,31 +1,40 @@
-## 🚀 Fully Automated Infrastructure & Configuration Deployment
-Terraform Modules + Ansible Roles + Jenkins + AWS SSM
+# 🚀 Fully Automated Infrastructure & Configuration Deployment  
+### Terraform Modules + Ansible Roles + Jenkins + AWS SSM
 
-Production-grade Infrastructure as Code (IaC) and Configuration Management project demonstrating secure, SSH-less automation using AWS SSM, Terraform modules, Ansible roles, and Jenkins pipelines.
+Production-grade **Infrastructure as Code (IaC)** and **Configuration Management** project demonstrating **secure, SSH-less automation** using **AWS Systems Manager (SSM)**, **Terraform modules**, **Ansible roles**, and **Jenkins pipelines**.
 
-From Git commit → provisioned infrastructure → configured servers (NO SSH)
+**From Git commit → provisioned infrastructure → configured servers (NO SSH)**
+
+---
 
 ## 👀 Recruiter Summary (30-Second Read)
 
-✔ Modular Terraform infrastructure provisioning
-✔ Role-based Ansible configuration management
-✔ Jenkins-driven automation pipeline
-✔ Secure access via AWS Systems Manager (SSM)
-✔ Zero SSH keys, zero manual server access
-✔ Fully reproducible, production-ready setup
+✔ Modular Terraform infrastructure provisioning  
+✔ Role-based Ansible configuration management  
+✔ Jenkins-driven automation pipeline  
+✔ Secure access via AWS Systems Manager (SSM)  
+✔ Zero SSH keys, zero manual server access  
+✔ Fully reproducible, production-ready setup  
 
-This project reflects how modern DevOps teams automate infrastructure securely.
+This project reflects **how modern DevOps teams automate infrastructure securely**.
+
+---
 
 ## 🧑‍💻 What I Built
 
-A fully automated DevOps pipeline that:
-Provisions AWS infrastructure using Terraform modules
-Configures servers using Ansible roles
-Uses AWS SSM instead of SSH for access and command execution
-Orchestrates everything via Jenkins CI/CD
-Eliminates manual intervention completely
+A **fully automated DevOps pipeline** that:
+
+- Provisions AWS infrastructure using **Terraform modules**
+- Configures servers using **Ansible roles**
+- Uses **AWS SSM instead of SSH** for access and command execution
+- Orchestrates everything via **Jenkins CI/CD**
+- Eliminates manual intervention completely
+
+---
 
 ## 🔄 Automation Flow (Actual Implementation)
+
+```text
 GitHub Commit
    ↓
 Jenkins Pipeline
@@ -39,6 +48,7 @@ Jenkins Pipeline
    │    ├─ Apply Security Hardening
    │    └─ Validate Configuration
    └─ Deployment Complete (No SSH Used)
+
 
 ## 🏗️ Infrastructure as Code (Terraform)
 ## Terraform Highlights
