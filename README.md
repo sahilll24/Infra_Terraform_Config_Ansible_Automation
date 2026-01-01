@@ -34,7 +34,7 @@ A **fully automated DevOps pipeline** that:
 
 ## 🔄 Automation Flow (Actual Implementation)
 
-```text
+
 GitHub Commit
    ↓
 Jenkins Pipeline
