@@ -34,7 +34,7 @@ A **fully automated DevOps pipeline** that:
 
 ## 🔄 Automation Flow (Actual Implementation)
 
-
+```text
 GitHub Commit
    ↓
 Jenkins Pipeline
@@ -48,7 +48,7 @@ Jenkins Pipeline
    │    ├─ Apply Security Hardening
    │    └─ Validate Configuration
    └─ Deployment Complete (No SSH Used)
-
+```
 
 ## 🏗️ Infrastructure as Code (Terraform)
 ## Terraform Highlights
