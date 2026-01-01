@@ -118,7 +118,7 @@ Eliminating manual ops with automation
 Sahil Mahesh Saykar
 DevOps Engineer
 
-GitHub: https://github.com/SahilSaykar24
+GitHub: https://github.com/sahilll24
 
 LinkedIn: https://www.linkedin.com/in/sahil-saykar-9a11a3264/
 
